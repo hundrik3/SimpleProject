@@ -2,8 +2,8 @@ import telebot
 from telebot import types
 import os
 
-token = os.environ.get('TOKEN')
-bot = telebot.TeleBot('token')
+TOKEN = os.environ.get('TOKEN')
+bot = telebot.TeleBot('TOKEN')
 
 url1 = os.environ.get('URL1')
 url2 = os.environ.get('URL2')
