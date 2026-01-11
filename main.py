@@ -2,8 +2,11 @@ import telebot
 from telebot import types
 import os
 
-TOKEN = os.environ.get('TOKEN')
-bot = telebot.TeleBot('TOKEN')
+TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
+bot = telebot.TeleBot(TOKEN)
+
+if not TOKEN:
+    raise ValueError("TELEGRAM_BOT_TOKEN environment variable is required")
 
 url1 = os.environ.get('URL1')
 url2 = os.environ.get('URL2')
