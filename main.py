@@ -59,7 +59,7 @@ def home():
     return 'живу'
 
 def run_http():
-    app.run(host='0.0.0.0', port=int(ps.environ.get("PORT", 8080)))
+    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 8080)))
 
 def keep_alive():
         t = Thread(target=run_http)
