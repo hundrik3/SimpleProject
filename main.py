@@ -1,6 +1,9 @@
 import telebot
 from telebot import types
 import os
+import flask
+from flask import Flask
+from threading import Thread
 
 TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
 bot = telebot.TeleBot(TOKEN)
@@ -49,4 +52,19 @@ def func(message):
     else:
         bot.send_message(message.chat.id, "Ой..")
 
-bot.polling(none_stop=True)
+app = Flask('')
+
+@app.route('/')
+def home():
+    return 'живу'
+
+def run_http():
+    app.run(host='0.0.0.0', port=int(ps.environ.get("PORT", 8080)))
+
+def keep_alive():
+        t = Thread(target=run_http)
+        t.start()
+
+if __name__ == "__main__":
+    keep_alive()
+    bot.polling(none_stop=True)
