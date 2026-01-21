@@ -34,7 +34,7 @@ def start(message):
     btn2 = types.KeyboardButton("Исаакиевский собор")
     btn3 = types.KeyboardButton("Летний сад")
     btn4 = types.KeyboardButton("Спас на крови")
-    btn5 = types.KeyboardButton("Петропаловская крепость")
+    btn5 = types.KeyboardButton("Петропавловская крепость")
     btn6 = types.KeyboardButton("Михайловский замок")
     btn7 = types.KeyboardButton("Александровская колонна")
     btn8 = types.KeyboardButton("Соборная мечеть")
