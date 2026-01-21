@@ -46,9 +46,9 @@ def start(message):
     btn14 = types.KeyboardButton("Казанский собор")
     btn15 = types.KeyboardButton("Мраморный дворец")
 
-    markup.add(btn1, btn2, btn3, btn4, btn 5)
-    markup.add(btn6, btn7, btn8, btn9, btn 10)
-    markup.add(btn11, btn12, btn 13, btn14, btn15)
+    markup.add(btn1, btn2, btn3, btn4, btn5)
+    markup.add(btn6, btn7, btn8, btn9, btn10)
+    markup.add(btn11, btn12, btn13, btn14, btn15)
 
     bot.send_message(message.chat.id, f"Привет, {message.from_user.first_name}!", reply_markup=markup)
 
